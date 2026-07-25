@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+    background-color: #120F17;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+@keyframes navbar-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-500%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-enter {
+    animation-name: navbar-enter;
+    animation-duration: 1000ms;       
+    animation-delay: 500ms;         /* Menunggu di atas 1 detik */
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: both;
+}
+
+@keyframes typewriter-caret-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.typewriter-caret {
+    display: inline-block;
+    margin-left: 0.05em;
+    animation: typewriter-caret-blink 800ms step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-caret {
+        animation: none;
+    }
+}
