@@ -5,6 +5,25 @@ body,
 #root {
     background-color: #120F17;
     font-family: "Plus Jakarta Sans", sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #27272a transparent;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #3f3f46;
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #52525b;
 }
 
 @keyframes navbar-enter {
@@ -27,6 +46,26 @@ body,
     animation-fill-mode: both;
 }
 
+@keyframes hero-enter {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-enter {
+    animation-name: hero-enter;
+    animation-duration: 1000ms;       
+    animation-delay: 50ms;         /* Menunggu di atas 1 detik */
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: both;
+}
+
 @keyframes typewriter-caret-blink {
     50% {
         opacity: 0;
@@ -43,4 +82,19 @@ body,
     .typewriter-caret {
         animation: none;
     }
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.ticker-track {
+    animation: ticker-scroll 30s linear infinite;
+    will-change: transform;
 }

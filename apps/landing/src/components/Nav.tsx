@@ -23,7 +23,7 @@ export default function Nav(){
             transition-colors duration-100 
             ${
                 isScrolled
-                    ? "border-white/10 bg-[#120F17]/10 shadow-lg shadow-black/20 backdrop-blur-md"
+                    ? "border-white/10 bg-[#120F17]/80 shadow-lg shadow-black/20 backdrop-blur-md"
                     : "border-transparent bg-transparent"
             }`}>
             <nav
@@ -74,7 +74,7 @@ export default function Nav(){
                     to="/"
                     className="
                         mr-3 rounded-2xl bg-[#7F55B1] px-5 py-2 font-bold
-                        shadow-2xl shadow-black/70 transition-[transform,background-color,box-shadow] duration-300 ease-out
+                        shadow-[3px_4px_0] shadow-black transition-[transform,background-color,box-shadow] duration-300 ease-out
                         hover:bg-[#9B7EBD] hover:shadow-black hover:-translate-y-0.5"
                 >
                     Buka App
