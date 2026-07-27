@@ -19,12 +19,12 @@ export default function Nav(){
 
     return (
         <header className={`
-            navbar-enter sticky top-0 z-50 border-b
+            navbar-enter sticky top-0 z-50
             transition-colors duration-100 
             ${
                 isScrolled
-                    ? "border-white/10 bg-[#120F17]/80 shadow-lg shadow-black/20 backdrop-blur-md"
-                    : "border-transparent bg-transparent"
+                    ? "bg-[#120F17]/80 shadow-lg shadow-black/20 backdrop-blur-md"
+                    : "bg-transparent"
             }`}>
             <nav
                 className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 pt-4"
@@ -40,7 +40,7 @@ export default function Nav(){
                         alt="logo"
                         className="
                             h-16 w-auto object-contain transition-[filter] duration-300
-                            hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.9)] "
+                            hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.9)]"
                     />
                 </a>
 

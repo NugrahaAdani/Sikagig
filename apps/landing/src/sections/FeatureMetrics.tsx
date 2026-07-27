@@ -23,7 +23,7 @@ const features: FeatureItem[] = [
 export default function FeatureMetrics(){
 
     return (
-        <section className="min-w-0 mt-30 mb-30">
+        <section className="min-w-0 py-28">
             <LoopItems />
             <FeatureContainer items={features}/>
         </section>

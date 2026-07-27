@@ -4,6 +4,11 @@ import Nav from '../components/Nav';
 import HeroSection from '../sections/HeroSection';
 import FeatureMetrics from '../sections/FeatureMetrics';
 import HowItWorks from '../sections/HowItWorks';
+import Example from '../sections/Example';
+import Help from '../sections/Help';
+import WhyUs from '../sections/WhyUs';
+import Faq from '../sections/Faq';
+import Footer from '../components/Footer';
 
 export default function HomePage(){
     useLayoutEffect(() => {
@@ -17,7 +22,7 @@ export default function HomePage(){
     return (
         <main className="relative isolate min-h-screen">
             
-            {/* background fix */}
+            {/* background */}
             <div className="pointer-events-none fixed inset-0 z-0">
                 <DotField
                     dotRadius={1.5}
@@ -41,12 +46,12 @@ export default function HomePage(){
                 <HeroSection />
                 <FeatureMetrics />
                 <HowItWorks />
-
-
-                {/* section lainnya */}
-                {/* <Footer /> */}
+                <Example />
+                <Help />
+                <WhyUs />
+                <Faq />
+                <Footer />
             </div>
-
         </main>
     )
 }

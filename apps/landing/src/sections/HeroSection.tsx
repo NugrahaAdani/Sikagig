@@ -54,9 +54,9 @@ export default function HeroSection(){
     return (
         <section className="hero-enter min-w-0 pt-0">
 
-            <hr className="mt-4 mx-18 opacity-30"  />
+            <div className="mx-auto h-[1.5px] w-[calc(100%-3rem)] max-w-6xl bg-white/20" />
 
-            <p className="mt-10 mx-8 text-left text-sm font-semibold uppercase tracking-widest text-purple-300">
+            <p className="mt-10 mx-8 text-left text-sm font-semibold uppercase tracking-widest text-[#A685E2]">
                 Cari sika. Ambil gig. Beresin kerjaan.
             </p>
 
@@ -89,7 +89,7 @@ export default function HeroSection(){
                                 typingSpeed={80}
                                 deletingSpeed={40}
                                 pauseDuration={1200}
-                                className="absolute inset-0 block text-[#7F55B1]"
+                                className="absolute inset-0 block text-[#A685E2]"
                             />
                         </div>
                     </h1>

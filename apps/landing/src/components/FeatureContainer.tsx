@@ -50,7 +50,7 @@ export default function FeatureContainer({ items }: FeatureContainerProps) {
     return (
         <div
         className="
-            mx-8 mt-12 grid grid-cols-1 overflow-hidden
+            mx-6 mt-12 grid grid-cols-1 overflow-hidden
             rounded-[42px] border border-white/15
             bg-[#0D0F13]/95
             lg:grid-cols-4"
