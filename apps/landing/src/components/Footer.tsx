@@ -16,15 +16,30 @@ export default function Footer(){
 
                 </div>
 
-                <div>
-                    <ul className="flex">
-                        <li>
+                <div className="flex gap-4">
+                        <a
+                            href="/terms"
+                            className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-2 text-xs text-white/60 transition-colors hover:text-white/80"
+                        >
                             Kebijakan Privasi
-                        </li>
-                        <li>
+                        </a>
+
+                        <a
+                            href="/privacy"
+                            className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-2 text-xs text-white/60 transition-colors hover:text-white/80"
+                        >
                             Ketentuan Pengguna
-                        </li>
-                    </ul>
+                        </a>
+
+                        <a
+                            href="https://instagram.com/nugrahaadanii"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 rounded-full border border-[#7F55B1] bg-[#7F55B1]/20 px-3 py-2 text-xs text-purple-400 transition-colors hover:bg-[#7F55B1]/60"
+                        >
+                            <i className="fa-brands fa-instagram"></i>
+                            <p>Instagram</p>
+                        </a>
                 </div>
             </div>
         </section>
