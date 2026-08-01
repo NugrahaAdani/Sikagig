@@ -19,9 +19,9 @@ function FaqContent({ title, message }: FaqProps){
                 type="button"
                 onClick={HandleClick}
                 aria-expanded={isOpen}
-                className="flex w-full items-center justify-between gap-6 py-7 text-left"
+                className="flex w-full items-center justify-between gap-4 py-5 text-left sm:gap-6 sm:py-7"
             >
-                <span className="text-2xl font-extrabold tracking-[-0.04em]">
+                <span className="text-xl font-extrabold tracking-[-0.04em] md:text-2xl">
                     {title}
                 </span>
 
@@ -117,9 +117,14 @@ const Content: FaqProps[] = [
 
 export default function Faq(){
     return(
-        <section id="faq" className="border-t border-amber-400 px-6 py-28">
-            <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.7fr]">
-                <div className="border-t border-white/20">
+        <section 
+            id="faq" 
+            className="
+                border-t border-amber-400 px-4 py-16 sm:px-6 sm:py-20 
+                lg:py-28">
+            
+            <div className="mx-auto grid max-w-7xl gap-8 sm:gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
+                <div className="order-2 border-t border-white/20 lg:order-1">
                     {Content.map((item, index) => (
                         <FaqContent 
                             key={index}
@@ -129,15 +134,15 @@ export default function Faq(){
                     ))}
                 </div>
 
-                <div className="text-right">
-                    <p className="text-sm font-black uppercase tracking-[0.22em] text-[#A685E2]">
+                {/* Heading — tampil pertama di mobile, kedua di lg */}
+                <div className="order-1 lg:order-2 lg:text-right">
+                    <p className="text-xs font-black uppercase tracking-[0.22em] text-[#A685E2] sm:text-sm">
                         FAQ
                     </p>
-                    <h2 className="items-end mt-4 text-5xl font-extrabold leading-[0.94] tracking-[-0.07em] md:text-7xl">
+                    <h2 className="mt-3 text-4xl font-extrabold leading-[0.94] tracking-[-0.07em] sm:mt-4 md:text-5xl lg:text-7xl">
                         Yang sering ditanyain sebelum mulai.
                     </h2>
                 </div>
-
             </div>
         </section>
     )

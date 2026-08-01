@@ -21,7 +21,8 @@ export default function LoopItems(){
                 key={index}
                 className="
                     shrink-0 whitespace-nowrap rounded-full
-                    border border-white/20 px-5 py-2"
+                    border border-white/20 px-4 py-1.5
+                    sm:px-5 sm:py-2"
             >
                 {item}
             </div>
@@ -30,17 +31,17 @@ export default function LoopItems(){
 
     return(
         <div className="
-                flex py-5 items-center overflow-hidden
+                flex items-center overflow-hidden py-4 sm:py-5
                 border-y border-white/20 bg-[#0D0F13]/70 "
         >
-            <div className="ticker-track flex w-max uppercase text-gray-300 text-sm font-semibold">
+            <div className="ticker-track flex w-max text-xs font-semibold uppercase text-gray-300 sm:text-sm">
                 {/* Kelompok pertama */}
-                <div className="flex shrink-0 gap-4 pr-4">
+                <div className="flex shrink-0 gap-3 pr-3 sm:gap-4 sm:pr-4">
                     {renderItems()}
                 </div>
 
                 {/* Duplikat agar looping mulus */}
-                <div aria-hidden="true" className="flex shrink-0 gap-4 pr-4">
+                <div aria-hidden="true" className="flex shrink-0 gap-3 pr-3 sm:gap-4 sm:pr-4">
                     {renderItems()}
                 </div>
             </div>

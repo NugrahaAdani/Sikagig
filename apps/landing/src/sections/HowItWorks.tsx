@@ -28,21 +28,21 @@ export default function HowItWorks(){
     return(
         <section 
             id="how-it-works" 
-            className="min-w-0 scroll-mt-24 px-6 py-4"
+            className="min-w-0 scroll-mt-16 px-4 py-12 sm:px-6 sm:py-16 lg:py-20"
         >
             <div className="
-                    mt-3 grid grid-cols-1 items-start gap-8
-                    lg:grid-cols-[40fr_60fr]">
+                    mx-auto grid max-w-7xl grid-cols-1 items-start gap-8
+                    lg:grid-cols-[40fr_60fr] lg:gap-10">
 
                 {/* bagian kiri */}
                 <div className="min-w-0 self-start lg:sticky lg:top-36">
-                    <h3 className="text-[15px] [word-spacing:0.25rem] tracking-widest text-[#A685E2] font-black uppercase">
+                    <h3 className="text-sm font-black uppercase tracking-widest text-[#A685E2] sm:text-[15px] sm:[word-spacing:0.25rem]">
                         cara kerjanya
                     </h3>
-                    <p className="text-white mt-4 text-7xl font-black tracking-[-0.08em]">
+                    <p className="mt-4 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl lg:leading-none">
                         Alurnya singkat. Tetap jelas dari awal.
                     </p>
-                    <p className="mt-6 text-base text-gray-400 font-medium">
+                    <p className="mt-5 max-w-2xl text-sm font-medium leading-relaxed text-gray-400 sm:mt-6 sm:text-base">
                         Posting kebutuhan, pilih sika, review bukti, lalu selesaikan pembayaran.
                         Semua langkah dibuat supaya juragan dan sika sama-sama tahu langkah berikutnya.
                     </p>

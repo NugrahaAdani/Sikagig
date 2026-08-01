@@ -10,18 +10,22 @@ type CardContainerProps = {
 
 function Card({ number, title, message }: CardProps){
     return(
-        <div className="flex w-full min-w-0 rounded-3xl border border-white/10 bg-[#0D0F13]/90 p-7">
-            <div className="ml-3 mr-20 text-5xl font-extrabold text-[#A685E2] tracking-[-0.08em]">
+        <div 
+            className="
+                flex w-full min-w-0 flex-col gap-4 rounded-2xl border border-white/10
+                    bg-[#0D0F13]/90 p-5 sm:flex-row sm:gap-6 sm:rounded-3xl sm:p-7"
+        >
+            <div className="shrink-0 text-4xl font-extrabold text-[#A685E2] sm:w-20 sm:text-5xl">
                 <p>
                     {number} 
                 </p>
             </div>
 
             <div className="min-w-0">
-                <h3 className="text-2xl font-extrabold">
+                <h3 className="text-xl font-extrabold leading-snug sm:text-2xl">
                     {title}
                 </h3>
-                <p className="mt-4 mb-3 text-gray-300">
+                <p className="mt-3 text-sm leading-relaxed text-gray-300 sm:mt-4 sm:text-base">
                     {message}
                 </p>
             </div>

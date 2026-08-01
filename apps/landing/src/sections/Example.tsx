@@ -39,12 +39,12 @@ export default function Example(){
     return(
         <section 
             id="example"
-            className="min-w-0 px-6 py-28">
-                <div className="flex flex-col py-10 border-y border-white/30">
-                    <p className="text-sm font-black uppercase tracking-[0.22em] text-[#A685E2]">
+            className="min-w-0 px-4 py-16 sm:px-6 sm:py-20 lg:py-28">
+                <div className="mx-auto flex max-w-7xl flex-col border-y border-white/30 py-8 sm:py-10">
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-[#A685E2] sm:text-sm sm:tracking-[0.22em]">
                         Contoh gig di Sikagig
                     </p>
-                    <h2 className="font-display mt-4 max-w-3xl text-5xl font-extrabold leading-[0.94] tracking-[-0.07em] md:text-7xl">
+                    <h2 className="font-display mt-4 max-w-3xl text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-7xl md:leading-[0.94]">
                         Dari task online sampai bantuan harian.
                     </h2>
                 </div>

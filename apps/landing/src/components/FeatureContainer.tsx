@@ -12,21 +12,28 @@ type FeatProps = FeatureItem & {
 }
 
 function Feat({ title, message, index }: FeatProps) {
+    const borderClass =
+        index === 0
+            ? ''
+            : index === 1
+                ? 'border-t border-white/10 sm:border-l sm:border-t-0'
+                : index === 2
+                    ? 'border-t border-white/10 sm:border-l-0 lg:border-l lg:border-t-0'
+                    : 'border-t border-white/10 sm:border-l lg:border-t-0'
+
     return (
         <div
         className={`
-            px-8 py-10
+            px-5 py-7
+            sm:px-6 sm:py-8
             lg:px-8 lg:py-9
-            ${index === 0
-            ? ''
-            : 'border-t border-white/10 lg:border-l lg:border-t-0'
-            }
+            ${borderClass}
         `}
         >
         <h3
             className="
-            text-3xl font-black tracking-[-0.06em] text-white
-            xl:text-3xl
+            text-2xl font-black text-white
+            sm:text-3xl
             "
         >
             {title}
@@ -34,9 +41,10 @@ function Feat({ title, message, index }: FeatProps) {
 
         <p
             className="
-            mt-4 max-w-sm
-            text-base font-semibold 
+            mt-3 max-w-sm
+            text-sm font-semibold leading-relaxed
             text-[#B8A58F]
+            sm:mt-4 sm:text-base
             xl:text-sm
             "
         >
@@ -50,10 +58,11 @@ export default function FeatureContainer({ items }: FeatureContainerProps) {
     return (
         <div
         className="
-            mx-6 mt-12 grid grid-cols-1 overflow-hidden
-            rounded-[42px] border border-white/15
+            mx-4 mt-8 grid grid-cols-1 overflow-hidden
+            rounded-3xl border border-white/15
             bg-[#0D0F13]/95
-            lg:grid-cols-4"
+            sm:mx-6 sm:mt-10 sm:grid-cols-2
+            lg:mt-12 lg:grid-cols-4 lg:rounded-[42px]"
         >
         {items.map((item, index) => (
             <Feat
