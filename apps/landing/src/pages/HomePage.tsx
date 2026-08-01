@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import DotField from '../components/DotField';
 import Nav from '../components/Nav';
 import HeroSection from '../sections/HeroSection';
@@ -12,11 +12,38 @@ import Footer from '../components/Footer';
 
 export default function HomePage(){
     useLayoutEffect(() => {
-    if ('scrollRestoration' in window.history) {
-        window.history.scrollRestoration = 'manual'
-    }
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual'
+        }
+        if (!window.location.hash) {
+            window.scrollTo(0, 0)
+        }
+    }, [])
 
-    window.scrollTo(0, 0)
+    useEffect(() => {
+        const hash = window.location.hash
+        if (!hash) return
+
+        // Tunggu DOM selesai render lalu scroll ke element
+        const id = hash.slice(1)
+        const el = document.getElementById(id)
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+            return
+        }
+
+        // Kalau belum ada (lazy render), retry beberapa kali
+        let attempts = 0
+        const interval = setInterval(() => {
+            const target = document.getElementById(id)
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' })
+                clearInterval(interval)
+            }
+            if (++attempts > 10) clearInterval(interval)
+        }, 100)
+
+        return () => clearInterval(interval)
     }, [])
 
     return (

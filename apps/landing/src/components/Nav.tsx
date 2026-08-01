@@ -6,10 +6,10 @@ export default function Nav(){
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const links = [
-        { href: "#how-it-works", label: "Cara Kerja" },
-        { href: "#example", label: "Contoh Gig" },
-        { href: "#help", label: "Butuh bantuan?" },
-        { href: "#faq", label: "FAQ" },
+        { href: "/#how-it-works", label: "Cara Kerja" },
+        { href: "/#example", label: "Contoh Gig" },
+        { href: "/#help", label: "Butuh bantuan?" },
+        { href: "/#faq", label: "FAQ" },
     ]
 
     useEffect(() => {

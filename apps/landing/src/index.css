@@ -9,6 +9,11 @@ body,
     scrollbar-color: #27272a transparent;
 }
 
+@theme {
+    --color-foreground: #f4f4f5;
+    --color-muted: #a1a1aa;
+}
+
 html::-webkit-scrollbar {
     width: 8px;
 }
